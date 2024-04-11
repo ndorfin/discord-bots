@@ -9,7 +9,7 @@ finished_games: list[FinishedGame] = (
     .all()
 )
 
-with open('./csv/match_history.csv', 'w') as file_object:
+with open("./csv/match_history.csv", "w") as file_object:
     print(
         (
             "timestamp,"
@@ -28,7 +28,7 @@ with open('./csv/match_history.csv', 'w') as file_object:
             "t1player3,"
             "t1player4"
         ),
-        file=file_object
+        file=file_object,
     )
     for finished_game in finished_games:
         winning_team = ""
@@ -80,5 +80,5 @@ with open('./csv/match_history.csv', 'w') as file_object:
                 f"{team0_ids},"
                 f"{team1_ids}"
             ),
-            file=file_object
+            file=file_object,
         )
